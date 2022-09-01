@@ -10,6 +10,9 @@ const app = express()
 
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
+app.get('/', (req, res) => {
+  res.status(200).send('app working')
+})
 
 app.use('/register', Register)
 app.use('/login', Login)
